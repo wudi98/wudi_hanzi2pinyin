@@ -1,5 +1,5 @@
-# wd-canvas2image
-A function that converts a canvas to an image.
+# wd-hanzi2pinyin
+A function that get the pinyin of Chinese characters.
 
 <!-- 
  ## Development
@@ -11,11 +11,9 @@ A function that converts a canvas to an image.
  -->
 
 ## Features
-- save image file
-- covert canvas to image
-- select the type of conversion
-- select the size of the transformation
+- get the pinyin of Chinese characters.【获取汉字的拼音】
 
+<!-- 
 ## Usage
 ```jsx harmony
 import React, { useState, useRef } from 'react';
@@ -115,44 +113,7 @@ function App() {
 
 export default App;
 ```
+ -->
 
-## Api To Introduce
-#### saveAsImage(canvas: CanvasElement, width: Number | String, height: Number | String, type: String, fileName: String)
-
-Save the image according to the parameters.
-
-#### saveAsPNG(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Save the image in PNG format.
-
-#### saveAsJPEG(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Save the image in JPEG format.
-
-#### saveAsGIF(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Save the image in GIF format.
-
-#### saveAsBMP(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Save the image in BMP format.
-
-#### convertToImage(canvas: CanvasElement, width: Number | String, height: Number | String, type: String)
-
-Convert the canvas to an image based on parameters.
-
-#### convertToPNG(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Convert the Canvas to a PNG image.
-
-#### convertToJPEG(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Convert the Canvas to a JPEG image.
-
-#### convertToGIF(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Convert the Canvas to a GIF image.
-
-#### convertToBMP(canvas: CanvasElement, width: Number | String, height: Number | String)
-
-Convert the Canvas to a BMP image.
+## Using the tutorial
+Refer to the address: https://zhuanlan.zhihu.com/p/109797421

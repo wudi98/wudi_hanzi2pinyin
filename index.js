@@ -1,6 +1,16 @@
+'use strict';
+
 !function (N, A) {
-  "object" == typeof exports && "object" == typeof module ? module.exports = A() : "function" == typeof define && define.amd ? define([], A) : "object" == typeof exports ? exports.Pinyin = A() : N.Pinyin = A()
-}(this, function () {
+  "object" == typeof exports &&
+  "object" == typeof module
+    ? module.exports = A()
+    : "function" == typeof define &&
+      define.amd
+        ? define([], A)
+        : "object" == typeof exports
+          ? exports.Pinyin = A()
+          : N.Pinyin = A();
+}(undefined, function () {
   return function (N) {
     function A(I) {
       if (t[I]) return t[I].exports;
@@ -25,7 +35,7 @@
           configurable: !1,
           enumerable: !0,
           get: I
-        })
+        });
       },
       A.n = function (N) {
         var t = N && N.__esModule ?
@@ -44,12 +54,11 @@
       A.p = "",
       A(A.s = 3)
   }([function (N, A, t) {
-    "use strict";
 
     function I(N) {
       N && ("function" == typeof N && (N = [N]), N.forEach && N.forEach(function (N) {
-        "function" == typeof N && N(o)
-      }))
+        "function" == typeof N && N(o);
+      }));
     }
 
     function U(N) {
@@ -80,13 +89,13 @@
         if ((r = f.compare(N, O)) > 0) return U.type = u,
           U.target = N,
           U;
-        0 === r && (U.type = E, e = A.length - 1)
+        0 === r && (U.type = E, e = A.length - 1);
       }
       if (U.type = E, e < 0) for (var n = 0, i = A.length - 1; n <= i;) {
         e = ~~((n + i) / 2);
         var S = A[e];
         if (0 === (r = f.compare(N, S))) break;
-        r > 0 ? n = e + 1 : i = e - 1
+        r > 0 ? n = e + 1 : i = e - 1;
       }
       return r < 0 && e--,
         U.target = t[e],
@@ -126,10 +135,9 @@
           return t && N.type === E ? N.target.toLowerCase() : N.target
         }).join(A || "")
       }
-    }
+    };
   },
     function (N, A, t) {
-      "use strict";
       A = N.exports = function (N) {
         N.EXCEPTIONS = {
           "嗲": "DIA",
@@ -162,14 +170,13 @@
           N.UNIHANS[176] = "列",
           N.UNIHANS[178] = "刢",
           N.UNIHANS[252] = "娝",
-          N.UNIHANS[330] = "偸"
+          N.UNIHANS[330] = "偸";
       },
         A.shouldPatch = function (N) {
           return "function" == typeof N && ("FOU" === N("伕").target && "XIA" === N("仚").target && "ZHONG" === N("诌").target && "CHONG" === N("婤").target && "CONG" === N("腠").target && "YONG" === N("攸").target && "HOU" === N("乯").target && "LENG" === N("刕").target && "GONG" === N("佝").target && "HUAI" === N("犿").target && "LIAO" === N("列").target && "LIN" === N("刢").target && "E" === N("钶").target)
-        }
+        };
     },
     function (N, A, t) {
-      "use strict";
       var I = ["阿", "哎", "安", "肮", "凹", "八", "挀", "扳", "邦", "勹", "陂", "奔", "伻", "屄", "边", "灬", "憋", "汃", "冫", "癶", "峬", "嚓", "偲", "参", "仓", "撡", "冊", "嵾", "曽", "叉", "芆", "辿", "伥", "抄", "车", "抻", "阷", "吃", "充", "抽", "出", "欻", "揣", "巛", "刅", "吹", "旾", "逴", "呲", "匆", "凑", "粗", "汆", "崔", "邨", "搓", "咑", "呆", "丹", "当", "刀", "嘚", "扥", "灯", "氐", "甸", "刁", "爹", "丁", "丟", "东", "吺", "厾", "耑", "垖", "吨", "多", "妸", "诶", "奀", "鞥", "儿", "发", "帆", "匚", "飞", "分", "丰", "覅", "仏", "紑", "夫", "旮", "侅", "甘", "冈", "皋", "戈", "给", "根", "刯", "工", "勾", "估", "瓜", "乖", "关", "光", "归", "丨", "呙", "哈", "咍", "佄", "夯", "茠", "诃", "黒", "拫", "亨", "噷", "叿", "齁", "乎", "花", "怀", "欢", "巟", "灰", "昏", "吙", "丌", "加", "戋", "江", "艽", "阶", "巾", "坕", "冂", "丩", "凥", "姢", "噘", "军", "咔", "开", "刊", "忼", "尻", "匼", "肎", "劥", "空", "抠", "扝", "夸", "蒯", "宽", "匡", "亏", "坤", "扩", "垃", "来", "兰", "啷", "捞", "肋", "勒", "崚", "哩", "俩", "奁", "良", "撩", "毟", "拎", "伶", "溜", "囖", "龙", "瞜", "噜", "驴", "娈", "掠", "抡", "罗", "呣", "妈", "埋", "嫚", "牤", "猫", "么", "呅", "门", "甿", "咪", "宀", "喵", "乜", "民", "名", "谬", "摸", "哞", "毪", "嗯", "拏", "腉", "囡", "囔", "孬", "疒", "娞", "恁", "能", "妮", "拈", "娘", "鸟", "捏", "囜", "宁", "妞", "农", "羺", "奴", "女", "奻", "疟", "黁", "挪", "喔", "讴", "妑", "拍", "眅", "乓", "抛", "呸", "喷", "匉", "丕", "囨", "剽", "氕", "姘", "乒", "钋", "剖", "仆", "七", "掐", "千", "呛", "悄", "癿", "亲", "靑", "卭", "丘", "区", "峑", "缺", "夋", "呥", "穣", "娆", "惹", "人", "扔", "日", "茸", "厹", "邚", "挼", "堧", "婑", "瞤", "捼", "仨", "毢", "三", "桒", "掻", "閪", "森", "僧", "杀", "筛", "山", "伤", "弰", "奢", "申", "升", "尸", "収", "书", "刷", "衰", "闩", "双", "脽", "吮", "说", "厶", "忪", "捜", "苏", "狻", "夊", "孙", "唆", "他", "囼", "坍", "汤", "夲", "忑", "熥", "剔", "天", "旫", "帖", "厅", "囲", "偷", "凸", "湍", "推", "吞", "乇", "穵", "歪", "弯", "尣", "危", "昷", "翁", "挝", "乌", "夕", "虲", "仙", "乡", "灱", "些", "心", "星", "凶", "休", "吁", "吅", "削", "坃", "丫", "恹", "央", "幺", "倻", "一", "囙", "应", "哟", "佣", "优", "扜", "囦", "曰", "晕", "帀", "災", "兂", "匨", "傮", "则", "贼", "怎", "増", "扎", "捚", "沾", "张", "佋", "蜇", "贞", "争", "之", "中", "州", "朱", "抓", "拽", "专", "妆", "隹", "宒", "卓", "乲", "宗", "邹", "租", "钻", "厜", "尊", "昨", "兙"],
         U = ["A", "AI", "AN", "ANG", "AO", "BA", "BAI", "BAN", "BANG", "BAO", "BEI", "BEN", "BENG", "BI", "BIAN", "BIAO", "BIE", "BIN", "BING", "BO", "BU", "CA", "CAI", "CAN", "CANG", "CAO", "CE", "CEN", "CENG", "CHA", "CHAI", "CHAN", "CHANG", "CHAO", "CHE", "CHEN", "CHENG", "CHI", "CHONG", "CHOU", "CHU", "CHUA", "CHUAI", "CHUAN", "CHUANG", "CHUI", "CHUN", "CHUO", "CI", "CONG", "COU", "CU", "CUAN", "CUI", "CUN", "CUO", "DA", "DAI", "DAN", "DANG", "DAO", "DE", "DEN", "DENG", "DI", "DIAN", "DIAO", "DIE", "DING", "DIU", "DONG", "DOU", "DU", "DUAN", "DUI", "DUN", "DUO", "E", "EI", "EN", "ENG", "ER", "FA", "FAN", "FANG", "FEI", "FEN", "FENG", "FIAO", "FO", "FOU", "FU", "GA", "GAI", "GAN", "GANG", "GAO", "GE", "GEI", "GEN", "GENG", "GONG", "GOU", "GU", "GUA", "GUAI", "GUAN", "GUANG", "GUI", "GUN", "GUO", "HA", "HAI", "HAN", "HANG", "HAO", "HE", "HEI", "HEN", "HENG", "HM", "HONG", "HOU", "HU", "HUA", "HUAI", "HUAN", "HUANG", "HUI", "HUN", "HUO", "JI", "JIA", "JIAN", "JIANG", "JIAO", "JIE", "JIN", "JING", "JIONG", "JIU", "JU", "JUAN", "JUE", "JUN", "KA", "KAI", "KAN", "KANG", "KAO", "KE", "KEN", "KENG", "KONG", "KOU", "KU", "KUA", "KUAI", "KUAN", "KUANG", "KUI", "KUN", "KUO", "LA", "LAI", "LAN", "LANG", "LAO", "LE", "LEI", "LENG", "LI", "LIA", "LIAN", "LIANG", "LIAO", "LIE", "LIN", "LING", "LIU", "LO", "LONG", "LOU", "LU", "LV", "LUAN", "LVE", "LUN", "LUO", "M", "MA", "MAI", "MAN", "MANG", "MAO", "ME", "MEI", "MEN", "MENG", "MI", "MIAN", "MIAO", "MIE", "MIN", "MING", "MIU", "MO", "MOU", "MU", "N", "NA", "NAI", "NAN", "NANG", "NAO", "NE", "NEI", "NEN", "NENG", "NI", "NIAN", "NIANG", "NIAO", "NIE", "NIN", "NING", "NIU", "NONG", "NOU", "NU", "NV", "NUAN", "NVE", "NUN", "NUO", "O", "OU", "PA", "PAI", "PAN", "PANG", "PAO", "PEI", "PEN", "PENG", "PI", "PIAN", "PIAO", "PIE", "PIN", "PING", "PO", "POU", "PU", "QI", "QIA", "QIAN", "QIANG", "QIAO", "QIE", "QIN", "QING", "QIONG", "QIU", "QU", "QUAN", "QUE", "QUN", "RAN", "RANG", "RAO", "RE", "REN", "RENG", "RI", "RONG", "ROU", "RU", "RUA", "RUAN", "RUI", "RUN", "RUO", "SA", "SAI", "SAN", "SANG", "SAO", "SE", "SEN", "SENG", "SHA", "SHAI", "SHAN", "SHANG", "SHAO", "SHE", "SHEN", "SHENG", "SHI", "SHOU", "SHU", "SHUA", "SHUAI", "SHUAN", "SHUANG", "SHUI", "SHUN", "SHUO", "SI", "SONG", "SOU", "SU", "SUAN", "SUI", "SUN", "SUO", "TA", "TAI", "TAN", "TANG", "TAO", "TE", "TENG", "TI", "TIAN", "TIAO", "TIE", "TING", "TONG", "TOU", "TU", "TUAN", "TUI", "TUN", "TUO", "WA", "WAI", "WAN", "WANG", "WEI", "WEN", "WENG", "WO", "WU", "XI", "XIA", "XIAN", "XIANG", "XIAO", "XIE", "XIN", "XING", "XIONG", "XIU", "XU", "XUAN", "XUE", "XUN", "YA", "YAN", "YANG", "YAO", "YE", "YI", "YIN", "YING", "YO", "YONG", "YOU", "YU", "YUAN", "YUE", "YUN", "ZA", "ZAI", "ZAN", "ZANG", "ZAO", "ZE", "ZEI", "ZEN", "ZENG", "ZHA", "ZHAI", "ZHAN", "ZHANG", "ZHAO", "ZHE", "ZHEN", "ZHENG", "ZHI", "ZHONG", "ZHOU", "ZHU", "ZHUA", "ZHUAI", "ZHUAN", "ZHUANG", "ZHUI", "ZHUN", "ZHUO", "ZI", "ZONG", "ZOU", "ZU", "ZUAN", "ZUI", "ZUN", "ZUO", ""],
         e = {
@@ -202,13 +209,12 @@
         PINYINS: U,
         UNIHANS: I,
         EXCEPTIONS: e
-      }
+      };
     },
     function (N, A, t) {
-      "use strict";
       var I = t(0),
         U = t(1);
       I.isSupported() && U.shouldPatch(I.genToken) && I.patchDict(U),
-        N.exports = I
+        N.exports = I;
     }])
 });
