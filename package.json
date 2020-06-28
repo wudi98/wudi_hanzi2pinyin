@@ -1,0 +1,30 @@
+{
+  "name": "wd-hanzi2pinyin",
+  "author": "Brian<csdnwuxiaodi@qq.com>",
+  "version": "0.0.10",
+  "description": "获取汉字的拼音最小的包！",
+  "keywords": [
+    "hanzi",
+    "汉字",
+    "function",
+    "tools",
+    "pinyin",
+    "拼音"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wudi98/wudi_hanzi2pinyin.git"
+  },
+  "homepage": "https://github.com/wudi98/wudi_hanzi2pinyin",
+  "bugs": {
+    "url": "https://github.com/wudi98/wudi_hanzi2pinyin/issues"
+  },
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "license": "MIT"
+}

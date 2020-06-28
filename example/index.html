@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapbox {
+            margin: 80px auto;
+            width: 640px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script src="src/wdHanzi2pinyin.js"></script>
+</head>
+<body>
+<div class="wrapbox">
+    <input type="text" id="input">
+    <div id="text"></div>
+</div>
+<script>
+    const inputEvent = document.getElementById('input');
+    const textEvent = document.getElementById('text');
+    // 有几个字就渲染几套这样的模板：
+    // <ruby>漢 <rp>(</rp><rt>han</rt><rp>)</rp></ruby>
+    // 传入value数组格式。就是使用Pinyin.parse解析出来的
+    // {
+    //      source: "打"
+    //      type: 2  type为2是汉字，为1则是其他
+    //      target: "DA"
+    // }
+    function buildingRubys(parseItem) {
+        let ruby = document.createElement('ruby');
+        ruby.style.margin = '2px';
+        if (parseItem.type === 2) {
+            ruby.innerHTML = `
+                ${parseItem.source}
+                <rp>(</rp><rt>
+                    ${(parseItem.target).toLowerCase()}
+                </rt><rp>)</rp>
+            `;
+        } else {
+            ruby.innerHTML = `${parseItem.source}`;
+        }
+        textEvent.appendChild(ruby);
+    }
+    inputEvent.addEventListener('input', (event) => {
+        textEvent.innerHTML = '';
+        const arr = Pinyin.parse(event.target.value) || [];
+        arr.forEach((item) => {
+            buildingRubys(item);
+        })
+    })
+</script>
+</body>
+</html>
